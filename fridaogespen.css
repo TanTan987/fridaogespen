@@ -1,23 +1,65 @@
-body{
+body {
   background-image: url(bilder/IMG_1764.jpg);
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-attachment: fixed;
+  background-position-x: 40%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  }
+}
 
-/*Fixes image to mobile*/
-  @media only screen and (max-width: 638px) {
-    body {
-    background-image: url(bilder/forsidebilde02_original.jpg);
-    background-position-x: -17em;
-   }
-  }
+#flexContainer {
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
 
-.navbar-default .navbar.less:400 {
+/*Add a background color to the top navigation*/
+.topnav {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: auto;
+  color: black;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*Style the links inside the navigation bar*/
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Dancing Script";
+  transition: text-decoration .2s linear;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: rgb(255, 255, 255);
+  /*  font-style: italic; */
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.navbar-default .navbar.less {
   background-color: none;
 }
 
@@ -30,34 +72,28 @@ a {
   padding: 0;
 }
 
-/*Div taggen som setter meny i midten*/
-#center {
-  margin: auto;
-  text-align: center;
-}
-
-/*Menyen*/
+/*Menu*/
 #center #menu {
-display: unset;
-list-style-type: none;
-margin-bottom: 2em;
-letter-spacing: 2px;
+  display: unset;
+  list-style-type: none;
+  margin-bottom: 2em;
+  letter-spacing: 2px;
 }
 
 /*Innhold i menyen*/
 #center li {
-float:center;
-margin-right: 1em;
-margin-top: 1em ;
-font-size: 18px;
-text-transform: uppercase;
-font-family: sans-serif, Arial;
-font-size: 13px;
-font-weight: 700;
+  float: center;
+  margin-right: 1em;
+  margin-top: 1em;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: sans-serif, Arial;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 /*Overskrift*/
-#title{
+#title {
   font-size: 60px;
   font-family: 'Great Vibes';
   text-align: center;
@@ -82,13 +118,20 @@ font-weight: 700;
 
 
 
-/*About - hvitt felt*/
+/*About - white field*/
 #about {
-float: right;
-width: auto;
-text-align: right;
-background-color: rgba(255, 255, 255, 0.5);
-padding: 10px;
-margin-right: auto;
-border-radius: 12px;
+  float: right;
+  width: auto;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  margin-right: auto;
+  border-radius: 12px;
+}
+
+/*Mobile*/
+@media only screen and (max-width: 650px) {
+  body {
+    /*     background-position-x: 40%;*/
+  }
 }
